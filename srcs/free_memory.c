@@ -1,0 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free_memory.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/01 16:32:37 by mnurlybe          #+#    #+#             */
+/*   Updated: 2023/05/01 17:34:19 by mnurlybe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../includes/push_swap.h"
+
+void    ft_free_arr(char **arr)
+{
+    char *str;
+
+    if (!arr)
+        return ;    
+    while (*arr)
+    {
+        str = *arr;
+        arr++;
+        free(str);
+    }
+    *arr = NULL;
+}
+
+void    ft_free_list(t_list **stack)
+{
+    t_list *el;
+
+    if (!stack)
+        return ;
+    while (*stack)
+    {
+        el = (*stack)->next;
+        (*stack)->data = 0;
+        free(*stack);
+        *stack = el;
+    }
+}
