@@ -30,7 +30,7 @@ void sb(t_list **stack)
     tmp->next = (*stack)->next;
     (*stack)->next = tmp;
     
-    // write(1, "sb\n", 3);
+    write(1, "sb\n", 3);
 }
 
 /*pb (push b): Take the first element at the top of a and put it at the top of b.
@@ -50,7 +50,7 @@ void pb(t_list **stack_a, t_list **stack_b)
     else
         ft_lstadd_front(stack_b, tmp);
 
-    // write(1, "pb\n", 3);
+    write(1, "pb\n", 3);
 }
 
 /*rb (rotate b): Shift up all elements of stack b by 1.
@@ -65,7 +65,7 @@ void rb(t_list **stack)
     *stack = (*stack)->next;
     ft_lstadd_back(stack, tmp);
 
-    // write(1, "rb\n", 3);
+    write(1, "rb\n", 3);
 }
 
 /*rrb (reverse rotate b): Shift down all elements of stack b by 1.
@@ -83,5 +83,5 @@ void rrb(t_list **stack)
     last->next = *stack;
     *stack = last; 
       
-    // write(1, "rrb\n", 3);
+    write(1, "rrb\n", 4);
 }

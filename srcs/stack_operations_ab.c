@@ -31,7 +31,7 @@ void ss(t_list **stack_a, t_list **stack_b)
     tmp_b->next = (*stack_b)->next;
     (*stack_b)->next = tmp_b;
     
-    // write(1, "ss\n", 3);
+    write(1, "ss\n", 3);
 }
 
 /*rr : ra and rb at the same time.*/
@@ -50,7 +50,7 @@ void rr(t_list **stack_a, t_list **stack_b)
     *stack_b = (*stack_b)->next;
     ft_lstadd_back(stack_b, tmp_b);
 
-    // write(1, "rr\n", 3);
+    write(1, "rr\n", 3);
 }
 
 /*rrr : rra and rrb at the same time.*/
@@ -78,5 +78,5 @@ void rrr(t_list **stack_a, t_list **stack_b)
     last_b->next = *stack_b;
     *stack_b = last_b;
       
-    // write(1, "rrr\n", 3);
+    write(1, "rrr\n", 4);
 }

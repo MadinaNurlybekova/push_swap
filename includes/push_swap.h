@@ -62,4 +62,7 @@ int range_check(char *lst);
 void    ft_free_list(t_list **stack);
 void    ft_free_arr(char **arr);
 
+// function to sort the stack
+void    sort_three(t_list **stack_a);
+
 #endif

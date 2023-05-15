@@ -26,6 +26,7 @@ MY_SOURCES = main.c \
 	srcs/stack_operations_a.c \
 	srcs/stack_operations_b.c \
 	srcs/stack_operations_ab.c \
+	srcs/small_sort.c \
 	     
 CFLAGS = -Wall -Wextra -Werror
 

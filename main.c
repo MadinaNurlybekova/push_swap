@@ -47,7 +47,9 @@ int main(int argc, char **argv)
     
     print(stack_a);
     printf("\n");
-    pb(&stack_a, &stack_b);
+
+    sort_three(&stack_a);
+    
     print(stack_a);
     printf("\n");
     print(stack_b);
