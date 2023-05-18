@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:20:24 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/03 20:22:20 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/18 19:18:41 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void pa(t_list **stack_a, t_list **stack_b)
     else
         ft_lstadd_front(stack_a, tmp);
 
-    write(1, "pb\n", 3);
+    write(1, "pa\n", 3);
 }
 
 /*ra (rotate a): Shift up all elements of stack a by 1.

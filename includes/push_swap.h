@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:49:43 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/03 20:26:13 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/18 21:36:41 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 typedef struct s_list
 {
     int data;
+    unsigned int    index;
+    unsigned int    score;
     struct s_list *next;
 }   t_list;
 
@@ -28,6 +30,7 @@ typedef struct s_list
 t_list	*ft_lstnew(int data);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+int     ft_lstsize(t_list *lst);
 
 // libft functions
 int	ft_atoi(const char *nptr);
@@ -51,6 +54,9 @@ void ss(t_list **stack_a, t_list **stack_b);
 void rr(t_list **stack_a, t_list **stack_b);
 void rrr(t_list **stack_a, t_list **stack_b);
 
+// function for additional stack operations
+void	finalize_stack_a(t_list **stack_a);
+void	stack_rotation(int index, t_list **stack);
 
 // functions to check the errors
 int error_check(int argc, char **argv);
@@ -62,7 +68,21 @@ int range_check(char *lst);
 void    ft_free_list(t_list **stack);
 void    ft_free_arr(char **arr);
 
+// functions to get min and max value
+int max_value(t_list *stack);
+int min_value(t_list *stack);
+
 // function to sort the stack
 void    sort_three(t_list **stack_a);
+void	sort_five(t_list **stack_a, t_list **stack_b);
+
+// get index functions
+int	get_mid_list(t_list *stack_a);
+t_list  *get_last_elem(t_list *stack);
+int	get_index_before(t_list *elem, t_list *stack_b);
+
+// check if sorted
+int check_if_sorted(t_list *stack);
+int	check_if_b_sorted(t_list *stack);
 
 #endif

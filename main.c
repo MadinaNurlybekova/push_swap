@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:53:48 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/03 20:28:26 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/18 21:45:37 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void print(t_list *list)
 }
 
 // main function receives argv argument
-
 int main(int argc, char **argv)
 {
     t_list *stack_a;
@@ -48,7 +47,10 @@ int main(int argc, char **argv)
     print(stack_a);
     printf("\n");
 
-    sort_three(&stack_a);
+    if (ft_lstsize(stack_a) <= 3)
+        sort_three(&stack_a);
+    else if (ft_lstsize(stack_a) <= 5)
+        sort_five(&stack_a, &stack_b);
     
     print(stack_a);
     printf("\n");

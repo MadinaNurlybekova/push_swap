@@ -6,7 +6,7 @@
 #    By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/29 12:47:34 by mnurlybe          #+#    #+#              #
-#    Updated: 2023/05/03 20:26:50 by mnurlybe         ###   ########.fr        #
+#    Updated: 2023/05/18 21:34:49 by mnurlybe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ MY_SOURCES = main.c \
 	libft/ft_lstnew.c \
 	libft/ft_lstadd_back.c \
 	libft/ft_lstadd_front.c \
+	libft/ft_lstsize.c \
 	srcs/fill_stack_a.c \
 	srcs/error_main.c \
 	srcs/error_checks.c \
@@ -27,6 +28,10 @@ MY_SOURCES = main.c \
 	srcs/stack_operations_b.c \
 	srcs/stack_operations_ab.c \
 	srcs/small_sort.c \
+	srcs/min_max_value.c \
+	srcs/five_sort.c \
+	srcs/get_index.c \
+	srcs/stack_oper_adds.c \
 	     
 CFLAGS = -Wall -Wextra -Werror
 

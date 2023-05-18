@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 19:52:59 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/15 20:33:22 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/18 18:01:55 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ int check_if_sorted(t_list *stack)
     t_list *elem;
     
     elem = stack;
+    
+    // if (ft_lstsize(elem) == 1)
+    //     return (0);
     while (elem->next != NULL)
     {
         if (elem->data > elem->next->data)
@@ -24,38 +27,6 @@ int check_if_sorted(t_list *stack)
         elem = elem->next;
     }
     return (0);
-}
-
-int max_value(t_list *stack)
-{
-    t_list *elem;
-    int max;
-
-    elem = stack;
-    max = stack->data;
-    while (elem != NULL)
-    {
-        if (elem->data > max)
-            max = elem->data;
-        elem = elem->next;
-    }
-    return (max);
-}
-
-int min_value(t_list *stack)
-{
-    t_list *elem;
-    int min;
-
-    elem = stack;
-    min = stack->data;
-    while (elem != NULL)
-    {
-        if (elem->data < min)
-            min = elem->data;
-        elem = elem->next;
-    }
-    return (min);
 }
 
 /* function that sorts when there are only three elements left in stack A */

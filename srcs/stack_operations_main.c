@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/01 17:43:30 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/03 20:19:19 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/18 20:06:17 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void ra(t_list **stack)
     *stack = (*stack)->next;
     ft_lstadd_back(stack, tmp);
 
-    // write(1, "ra\n", 3);
+    write(1, "ra\n", 3);
 }
 
 /*rb (rotate b): Shift up all elements of stack b by 1.
@@ -273,10 +273,13 @@ int main(int argc, char **argv)
     printf("\nb: ");
     print(stack_b);
     
-    pb(&stack_a, &stack_b);
-    pb(&stack_a, &stack_b);
-    pb(&stack_a, &stack_b);
-    rrr(&stack_a, &stack_b);
+    // pb(&stack_a, &stack_b);
+    // pb(&stack_a, &stack_b);
+    // pb(&stack_a, &stack_b);
+    // rrr(&stack_a, &stack_b);
+    ra(&stack_a);
+    ra(&stack_a);
+    // ra(stack_a);
 
     printf("\nAfter:\n");
     printf("a: ");
