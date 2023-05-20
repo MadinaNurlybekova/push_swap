@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:53:48 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/18 21:45:37 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/19 13:55:08 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,17 @@ int main(int argc, char **argv)
         fill_stack_a(&stack_a, argc, argv);
     }
     
-    print(stack_a);
-    printf("\n");
+    // print(stack_a);
+    // printf("\n");
 
     if (ft_lstsize(stack_a) <= 3)
         sort_three(&stack_a);
     else if (ft_lstsize(stack_a) <= 5)
         sort_five(&stack_a, &stack_b);
     
-    print(stack_a);
-    printf("\n");
-    print(stack_b);
+    // print(stack_a);
+    // printf("\n");
+    // print(stack_b);
     ft_free_list(&stack_a);
     return (0);
 }

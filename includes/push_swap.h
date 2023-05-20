@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/28 12:49:43 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/18 21:36:41 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/20 22:53:04 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 typedef struct s_list
 {
     int data;
-    unsigned int    index;
+    int    index;
     unsigned int    score;
     struct s_list *next;
 }   t_list;

@@ -6,7 +6,7 @@
 #    By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/29 12:47:34 by mnurlybe          #+#    #+#              #
-#    Updated: 2023/05/18 21:34:49 by mnurlybe         ###   ########.fr        #
+#    Updated: 2023/05/20 23:22:34 by mnurlybe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ MY_SOURCES = main.c \
 	srcs/five_sort.c \
 	srcs/get_index.c \
 	srcs/stack_oper_adds.c \
+	srcs/big_sort.c \
 	     
 CFLAGS = -Wall -Wextra -Werror
 
