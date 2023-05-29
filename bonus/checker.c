@@ -6,11 +6,21 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 17:19:28 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/29 20:47:17 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/29 21:29:42 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
+
+void print(t_list *list)
+{
+    while (list != NULL)
+    {
+        printf("%d ", list->data);
+        list = list->next;
+    }
+    printf("\n");
+}
 
 void	bonus_output(t_list **stack_a, t_list **stack_b)
 {
@@ -28,7 +38,7 @@ void	bonus_output(t_list **stack_a, t_list **stack_b)
 			instructions_one(line, stack_a, stack_b);
 			line = get_next_line(0);
 		}
-		if (stack_b == NULL && !check_if_sorted(*stack_a))
+		if (!ft_lstsize(*stack_b) && !check_if_sorted(*stack_a))
 			write(1, "OK\n", 3);
 		else
 			write(1, "KO\n", 3);
@@ -55,6 +65,10 @@ int	main(int argc, char **argv)
 		fill_stack_a(&stack_a, argc, argv);
 	}
 	bonus_output(&stack_a, &stack_b);
+	// printf("\nSTACK_A: ");
+	// print(stack_a);
+	// printf("\nSTACK_B: ");
+	// print(stack_b);
 	ft_free(&stack_a, &stack_b);
 	return (0);
 }
