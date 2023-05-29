@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 20:03:03 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/18 21:42:49 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/25 22:05:02 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 // void	print(t_list *list)
 // {
 // 	while (list != NULL)
-// 	{
+// 	{	// printf("{CHEAP_ELEM: %d, %d}", cheap_elem->data, cheap_elem->score);
 // 		printf("%d ", list->data);
 // 		list = list->next;
 // 	}

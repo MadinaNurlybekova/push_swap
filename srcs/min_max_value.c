@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 19:19:15 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/16 19:20:48 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/25 21:51:40 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,34 @@ int min_value(t_list *stack)
         elem = elem->next;
     }
     return (min);
+}
+
+/* this function returns the pointer to the node with the max value in a stack */
+t_list	*get_max_elem(t_list *stack)
+{
+	t_list *elem_b;
+	
+	elem_b = stack;
+	while (elem_b != NULL)
+	{
+		if (elem_b->data == max_value(stack))
+			break;
+		elem_b = elem_b->next;
+	}
+	return (elem_b);
+}
+
+/* this function returns the pointer to the node with the min value in a stack */
+t_list	*get_min_elem(t_list *stack)
+{
+	t_list *elem_b;
+	
+	elem_b = stack;
+	while (elem_b != NULL)
+	{
+		if (elem_b->data == min_value(stack))
+			break;
+		elem_b = elem_b->next;
+	}
+	return (elem_b);
 }

@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 20:24:54 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/03 20:25:51 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/29 19:36:10 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,9 @@ void rrr(t_list **stack_a, t_list **stack_b)
     t_list *tmp_b;
     t_list *last_a;
     t_list *last_b;
+
+    if (!(*stack_a) || !((*stack_a)->next) || !(*stack_b) || !((*stack_b)->next))
+        return ;
 
     tmp_a = *stack_a;
     tmp_b = *stack_b;

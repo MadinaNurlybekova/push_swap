@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/29 20:17:10 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/29 20:23:37 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/29 20:47:39 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	instructions_one(const char *instr, t_list **stack_a, t_list **stack_b)
 			b_rrr(stack_a, stack_b);
 	}
 	else if ((instr[0] == 's' || instr[0] == 'p') && instr[2] == '\n')
-		perform_instructions_two(instr, stack_a, stack_b);
+		instructions_two(instr, stack_a, stack_b);
 	else
 	{
 		write(1, "Error\n", 6);

@@ -6,12 +6,14 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 19:52:59 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/18 18:01:55 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/29 19:45:50 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+/* function to check if the stack is sorted,
+if it is sorted then it returns 0, else 1*/
 int check_if_sorted(t_list *stack)
 {
     t_list *elem;

@@ -6,7 +6,7 @@
 /*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 17:43:23 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/01 15:05:40 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2023/05/29 20:52:49 by mnurlybe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_atoi(const char *nptr)
 
 long	ft_atoi_long(const char *nptr)
 {
-	int		i;
+	int			i;
 	long		sign;
 	long		res;
 
