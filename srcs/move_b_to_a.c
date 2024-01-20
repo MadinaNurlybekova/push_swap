@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_b_to_a.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mnurlybe <mnurlybe@student.42.fr>          +#+  +:+       +#+        */
+/*   By: julienmoigno <julienmoigno@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 20:47:42 by mnurlybe          #+#    #+#             */
-/*   Updated: 2023/05/25 22:07:33 by mnurlybe         ###   ########.fr       */
+/*   Updated: 2024/01/20 17:36:28 by julienmoign      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@
 // #include "get_index.c"
 // #include "big_sort.c"
 
-/* this function gets the future index of the elem in another stack in order to calculated the score */
+/* this function gets the future index of the elem 
+in another stack in order to calculated the score */
 int	get_future_index_in_a(int num, t_list *stack_a)
 {
 	int future_index;
@@ -38,7 +39,8 @@ int	get_future_index_in_a(int num, t_list *stack_a)
 			future_index = 0;
 		else
 		{
-			while (stack_a->next != NULL && !(num > stack_a->data && num < stack_a->next->data))
+			while (stack_a->next != NULL 
+				&& !(num > stack_a->data && num < stack_a->next->data))
 			{
 				future_index++;
 				stack_a = stack_a->next; 
@@ -65,30 +67,54 @@ void get_score_ba(t_list **stack_a, t_list **stack_b)
 	}
 }
 
+int	getscoreb(t_list *elem, t_list *stack_b)
+{
+	int score;
+
+	score = 0;
+
+	if (elem->index < get_mid_list(stack_b))
+		score += elem->index;
+	else
+		score += ft_lstsize(stack_b) - elem->index;
+	return (score);
+}
+
+int	getscorea(t_list *stack_a, int future_index)
+{
+	int score;
+
+	score = 0;
+
+	if (future_index < get_mid_list(stack_a))
+		score += future_index;
+	else 
+		score += ft_lstsize(stack_a) - future_index;
+	return (score);
+}
+
+
 void	move_b_to_a(t_list **stack_b, t_list **stack_a, t_list *elem)
 {
 	int score_a;
 	int score_b;
 	int future_index;
 
-	score_a = 0;
-	score_b = 0;
 	future_index = get_future_index_in_a(elem->data, *stack_a);
-	if (elem->index < get_mid_list(*stack_b))
-		score_b += elem->index;
-	else
-		score_b += ft_lstsize(*stack_b) - elem->index; 
-	if (future_index < get_mid_list(*stack_a))
-		score_a += future_index;
-	else 
-		score_a += ft_lstsize(*stack_a) - future_index;
-	if (elem->index < get_mid_list(*stack_b) && future_index < get_mid_list(*stack_a))
+	score_a = getscorea(*stack_a, future_index);
+	score_b = getscoreb(elem, *stack_b);
+		
+	if (elem->index < get_mid_list(*stack_b) 
+		&& future_index < get_mid_list(*stack_a))
 		submove_rr(score_a, score_b, stack_a, stack_b);
-	else if (elem->index >= get_mid_list(*stack_b) && future_index >= get_mid_list(*stack_a))
+	else if (elem->index >= get_mid_list(*stack_b) 
+		&& future_index >= get_mid_list(*stack_a))
 		submove_rrr(score_a, score_b, stack_a, stack_b);
-	else if (elem->index < get_mid_list(*stack_b) && future_index >= get_mid_list(*stack_a))
+	else if (elem->index < get_mid_list(*stack_b) 
+		&& future_index >= get_mid_list(*stack_a))
 		submove_rbrra(score_a, score_b, stack_a, stack_b);
-	else if (elem->index >= get_mid_list(*stack_b) && future_index < get_mid_list(*stack_a))
+	else if (elem->index >= get_mid_list(*stack_b) 
+		&& future_index < get_mid_list(*stack_a))
 		submove_rarrb(score_a, score_b, stack_a, stack_b);
 	pa(stack_a, stack_b);
 }
